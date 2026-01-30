@@ -1,20 +1,30 @@
 @import "tailwindcss";
 
+@theme {
+  /* 1. Link the fonts we loaded in layout.tsx */
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-orbitron);
+
+  /* 2. Register the custom animations */
+  --animate-scan: scan 4s linear infinite;
+  --animate-spin-slow: spin 12s linear infinite;
+}
+
+/* 3. Define the movement for the Scanner */
+@keyframes scan {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+/* 4. Base Styles */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -22,5 +32,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+  
+  /* FIXED: Use standard CSS properties for smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
