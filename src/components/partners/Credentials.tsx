@@ -117,7 +117,7 @@ export default function Credentials() {
             </p>
             <div className="mt-6 pt-4 border-t border-white/10">
               <a
-                href="https://goaero.aero/post/meet-the-teams-team-tremblay"
+                href="https://www.goaeroprize.com/post/meet-the-teams-team-tremblay"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-mono text-[10px] uppercase tracking-widest text-zinc-400 hover:text-white transition-colors inline-flex items-center gap-1"

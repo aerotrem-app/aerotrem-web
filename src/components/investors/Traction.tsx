@@ -190,7 +190,7 @@ export default function Traction() {
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             <a
-              href="https://goaero.aero/post/meet-the-teams-team-tremblay"
+              href="https://www.goaeroprize.com/post/meet-the-teams-team-tremblay"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 border border-white/10 bg-white/[0.02] px-6 py-4 transition-all hover:border-cyan-500/50"
