@@ -82,15 +82,15 @@ export default function Home() {
       </motion.div>
 
       {/* Main content - centered */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 pt-24 md:pt-0">
         {/* Tagline */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase leading-[0.9] tracking-tight">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase leading-[0.9] tracking-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-zinc-600">
               The Future of
             </span>
@@ -101,7 +101,7 @@ export default function Home() {
             <br />
             <span className="text-white">Response</span>
           </h1>
-          <p className="mt-6 text-lg text-zinc-400 max-w-md mx-auto">
+          <p className="mt-4 md:mt-6 text-base md:text-lg text-zinc-400 max-w-md mx-auto px-4">
             Autonomous aerial systems for sub-3-minute urban emergency response.
           </p>
         </motion.div>

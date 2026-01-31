@@ -47,9 +47,9 @@ export default function Credentials() {
               </div>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed">
-              Founded at McGill&apos;s Faculty of Engineering. Access to world-class
-              research facilities, faculty advisors, and student innovation
-              resources.
+              Founded at McGill&apos;s Faculty of Engineering. Access to
+              world-class research facilities, faculty advisors, and student
+              innovation resources.
             </p>
             <div className="mt-6 pt-4 border-t border-white/10">
               <div className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">

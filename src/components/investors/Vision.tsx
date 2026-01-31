@@ -157,8 +157,8 @@ export default function Vision() {
           className="mt-16 text-center"
         >
           <p className="text-xl md:text-2xl text-zinc-400 italic max-w-4xl mx-auto leading-relaxed">
-            &ldquo;In my opinion, the time spent in an elevator or staircase or stuck
-            in traffic constitutes{" "}
+            &ldquo;In my opinion, the time spent in an elevator or staircase or
+            stuck in traffic constitutes{" "}
             <span className="text-white not-italic">
               precious minutes wasted
             </span>{" "}

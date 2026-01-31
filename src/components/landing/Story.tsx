@@ -99,7 +99,9 @@ function FeatureQuote({
       transition={{ duration: 0.6, delay }}
       className="relative border-l-2 border-cyan-500 pl-6 py-2"
     >
-      <p className="text-lg text-zinc-300 italic leading-relaxed">&ldquo;{quote}&rdquo;</p>
+      <p className="text-lg text-zinc-300 italic leading-relaxed">
+        &ldquo;{quote}&rdquo;
+      </p>
       <p className="mt-3 font-mono text-xs uppercase tracking-widest text-cyan-500">
         — {source}
       </p>
@@ -167,7 +169,8 @@ export default function Story() {
               Montreal,
               <span className="text-white"> precious minutes are lost </span>
               when ambulances get stuck in traffic, elevators, or construction
-              zones. We&apos;re building autonomous aerial systems to change that.
+              zones. We&apos;re building autonomous aerial systems to change
+              that.
             </motion.p>
 
             <FeatureQuote
