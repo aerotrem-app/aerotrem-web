@@ -183,17 +183,25 @@ function AnimatedDrone({ mouseX, mouseY }: { mouseX: number; mouseY: number }) {
   );
 }
 
-// Floating particles
+// Floating particles with pre-computed positions
+const particleData = Array.from({ length: 20 }, (_, i) => ({
+  id: i,
+  left: (i * 5 + 2.5) % 100, // Deterministic spread
+  top: (i * 5 + 2.5) % 100,
+  duration: 3 + (i % 3),
+  delay: (i * 0.1) % 2,
+}));
+
 function Particles() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(20)].map((_, i) => (
+      {particleData.map((particle) => (
         <motion.div
-          key={i}
+          key={particle.id}
           className="absolute h-1 w-1 rounded-full bg-cyan-500/40"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`,
           }}
           animate={{
             y: [0, -30, 0],
@@ -201,9 +209,9 @@ function Particles() {
             scale: [1, 1.5, 1],
           }}
           transition={{
-            duration: 3 + Math.random() * 2,
+            duration: particle.duration,
             repeat: Infinity,
-            delay: Math.random() * 2,
+            delay: particle.delay,
           }}
         />
       ))}

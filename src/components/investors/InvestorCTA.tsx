@@ -49,8 +49,9 @@ export default function InvestorCTA() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="mt-6 text-lg text-zinc-400 max-w-2xl mx-auto"
         >
-          We're raising our seed round to bring autonomous emergency response
-          from prototype to production. Be part of the future of aerospace.
+          We&apos;re raising our seed round to bring autonomous emergency
+          response from prototype to production. Be part of the future of
+          aerospace.
         </motion.p>
 
         {/* Investment highlights */}
@@ -116,8 +117,8 @@ export default function InvestorCTA() {
           </a>
 
           <p className="mt-6 text-sm text-zinc-500">
-            We'll send you our pitch deck and schedule a call to discuss the
-            opportunity.
+            We&apos;ll send you our pitch deck and schedule a call to discuss
+            the opportunity.
           </p>
         </motion.div>
       </div>

@@ -106,8 +106,8 @@ export default function Technology() {
           </h2>
           <p className="mt-6 text-lg text-zinc-400 max-w-2xl">
             Four years of competition-tested engineering. From blended-wing
-            designs to tail-sitter configurations—we've pushed the boundaries of
-            autonomous flight.
+            designs to tail-sitter configurations—we&apos;ve pushed the
+            boundaries of autonomous flight.
           </p>
         </motion.div>
 

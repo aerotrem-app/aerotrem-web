@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 // Animated grid background
 function GridBackground() {
@@ -23,26 +22,34 @@ function GridBackground() {
   );
 }
 
-// Floating particles
+// Floating particles with pre-computed random values
+const particleData = Array.from({ length: 15 }, (_, i) => ({
+  id: i,
+  left: (i * 6.67 + 3) % 100, // Deterministic spread
+  top: (i * 7 + 5) % 100,
+  duration: 4 + (i % 3),
+  delay: (i * 0.2) % 2,
+}));
+
 function Particles() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(15)].map((_, i) => (
+      {particleData.map((particle) => (
         <motion.div
-          key={i}
+          key={particle.id}
           className="absolute h-1 w-1 rounded-full bg-cyan-500/30"
           style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
+            left: `${particle.left}%`,
+            top: `${particle.top}%`,
           }}
           animate={{
             y: [0, -20, 0],
             opacity: [0.2, 0.6, 0.2],
           }}
           transition={{
-            duration: 4 + Math.random() * 2,
+            duration: particle.duration,
             repeat: Infinity,
-            delay: Math.random() * 2,
+            delay: particle.delay,
           }}
         />
       ))}
@@ -51,14 +58,6 @@ function Particles() {
 }
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
       <GridBackground />

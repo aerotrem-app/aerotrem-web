@@ -187,8 +187,8 @@ export default function Team() {
           className="mt-16 text-center"
         >
           <p className="text-xl md:text-2xl text-zinc-400 italic max-w-3xl mx-auto">
-            "The fascination of flight can't be expressed with words. It really
-            lies beyond the capabilities of human endeavor."
+            &ldquo;The fascination of flight can&apos;t be expressed with words.
+            It really lies beyond the capabilities of human endeavor.&rdquo;
           </p>
           <footer className="mt-6">
             <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">

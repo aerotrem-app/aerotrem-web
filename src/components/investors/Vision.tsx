@@ -157,12 +157,12 @@ export default function Vision() {
           className="mt-16 text-center"
         >
           <p className="text-xl md:text-2xl text-zinc-400 italic max-w-4xl mx-auto leading-relaxed">
-            "In my opinion, the time spent in an elevator or staircase or stuck
+            &ldquo;In my opinion, the time spent in an elevator or staircase or stuck
             in traffic constitutes{" "}
             <span className="text-white not-italic">
               precious minutes wasted
             </span>{" "}
-            by First Responders."
+            by First Responders.&rdquo;
           </p>
           <footer className="mt-6">
             <span className="font-mono text-xs uppercase tracking-widest text-cyan-500">

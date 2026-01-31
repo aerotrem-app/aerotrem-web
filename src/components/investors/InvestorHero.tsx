@@ -3,42 +3,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-// Animated counter for the hero stat
-function AnimatedNumber({
-  value,
-  duration = 2,
-}: {
-  value: number;
-  duration?: number;
-}) {
-  const [displayValue, setDisplayValue] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const [isInView, setIsInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsInView(entry.isIntersecting),
-      { threshold: 0.5 },
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isInView) return;
-    let startTime: number;
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-      setDisplayValue(Math.floor(progress * value));
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-    requestAnimationFrame(animate);
-  }, [isInView, value, duration]);
-
-  return <span ref={ref}>{displayValue.toLocaleString()}</span>;
-}
-
 // Floating orbs background
 function FloatingOrbs() {
   return (
@@ -363,7 +327,7 @@ export default function InvestorHero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="mt-6 max-w-lg text-lg text-zinc-400 leading-relaxed"
             >
-              Autonomous aerial systems that bypass traffic entirely. We're
+              Autonomous aerial systems that bypass traffic entirely. We&apos;re
               building the infrastructure for{" "}
               <span className="text-white">
                 sub-3-minute emergency response
