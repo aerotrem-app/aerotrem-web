@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Orbitron } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const orbitron = Orbitron({
-  variable: "--font-orbitron",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
+import "@/app/globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
   title: "Aerotrem | Autonomous Aerospace Systems",
@@ -35,10 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${inter.variable} ${orbitron.variable} antialiased bg-black text-white`}
-      >
-        {children}
+      <body className="antialiased bg-black text-white">
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

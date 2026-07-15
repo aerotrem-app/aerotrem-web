@@ -166,11 +166,11 @@ export default function Story() {
               className="text-lg text-zinc-400 leading-relaxed mb-12"
             >
               Aerotrem emerged from a simple observation: in cities like
-              Montreal,
+              Montreal[cite: 8],
               <span className="text-white"> precious minutes are lost </span>
               when ambulances get stuck in traffic, elevators, or construction
-              zones. We&apos;re building autonomous aerial systems to change
-              that.
+              zones[cite: 8]. We&apos;re building autonomous aerial systems to change
+              that[cite: 8].
             </motion.p>
 
             <FeatureQuote
@@ -188,34 +188,27 @@ export default function Story() {
               <Milestone
                 year="2021"
                 title="McGill Drone Club Founded"
-                description="Started from scratch, learning avionics, software, and aerodynamics to design competition-ready UAVs."
+                description="Started from scratch, learning avionics, software, and aerodynamics to design competition-ready UAVs[cite: 8]."
                 delay={0.1}
               />
               <Milestone
                 year="2022"
-                title="VFS Competition — 3rd Place"
-                description="First drone built by the team placed in the top 3 at the Vertical Flight Society student competition."
+                title="VFS DBVF — 3rd Place Finish"
+                description="First drone built placed in the top 3 at the Vertical Flight Society student design-build challenge[cite: 8]."
                 delay={0.2}
               />
               <Milestone
                 year="2023"
-                title="Canadian Space Agency Internship"
-                description="Hands-on experience with aerospace systems and mission-critical engineering standards."
+                title="Lichten Award"
+                description="Awarded the Lichten Award by Bell Canada for dynamic thrust test stand calibration and instrumentation research."
                 delay={0.3}
               />
               <Milestone
                 year="2024"
-                title="Aerial Competition Win"
-                description="Team's drone took first place, validating years of iterative design and testing."
+                title="GoAERO Selection"
+                description="Selected to compete in the international emergency response flyer challenge, validating dynamic telemetry designs."
                 highlight
                 delay={0.4}
-              />
-              <Milestone
-                year="2024"
-                title="GoAERO Global Competition"
-                description="Selected to compete in the international emergency response flyer challenge. Featured in official competition interview."
-                highlight
-                delay={0.5}
               />
             </div>
           </div>
@@ -232,20 +225,20 @@ export default function Story() {
               />
               <AchievementBadge
                 icon="🏆"
-                label="Competitions"
-                value="3 Wins"
+                label="Competition"
+                value="VFS 3rd"
                 delay={0.15}
               />
               <AchievementBadge
                 icon="🛠"
                 label="Years Building"
-                value="4+"
+                value="5"
                 delay={0.2}
               />
               <AchievementBadge
                 icon="🚀"
-                label="CSA Internship"
-                value="2023"
+                label="Research Award"
+                value="Lichten"
                 delay={0.25}
               />
             </div>
@@ -272,11 +265,11 @@ export default function Story() {
               </h3>
               <p className="text-zinc-400 leading-relaxed mb-6">
                 Average ambulance response time in major cities:{" "}
-                <span className="text-white font-bold">8-12 minutes</span>. In
+                <span className="text-white font-bold">8-12 minutes</span>[cite: 8]. In
                 traffic or high-rise buildings, it can exceed{" "}
-                <span className="text-red-400 font-bold">20+ minutes</span>. For
+                <span className="text-red-400 font-bold">20+ minutes</span>[cite: 8]. For
                 cardiac arrest, survival drops 10% for every minute without
-                defibrillation.
+                defibrillation[cite: 8].
               </p>
               <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/10">
                 <div>
@@ -319,16 +312,15 @@ export default function Story() {
               </h3>
               <p className="text-zinc-400 leading-relaxed mb-6">
                 Autonomous aerial emergency response systems that bypass traffic
-                entirely. Sustainable propulsion. Vertical takeoff.
-                Direct-to-rooftop delivery of medical supplies and
-                first-response equipment.
+                entirely[cite: 8]. Sustainable propulsion, vertical takeoff, and
+                direct-to-rooftop delivery[cite: 8].
               </p>
               <ul className="space-y-3">
                 {[
                   "Vertical takeoff & landing (VTOL)",
                   "Sustainable electric propulsion",
                   "Autonomous navigation",
-                  "Medical payload capacity",
+                  "Modular rescue payload capacity",
                 ].map((item, i) => (
                   <li
                     key={i}

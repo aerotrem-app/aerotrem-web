@@ -392,9 +392,9 @@ export default function InvestorHero() {
             {/* Floating data points around drone */}
             {[
               { label: "TILT-WING", x: "10%", y: "20%", delay: 1 },
-              { label: "A* NAV", x: "80%", y: "15%", delay: 1.2 },
-              { label: "115KG", x: "85%", y: "75%", delay: 1.4 },
-              { label: "25.2KWH", x: "5%", y: "80%", delay: 1.6 },
+              { label: "AUTONOMOUS", x: "80%", y: "15%", delay: 1.2 },
+              { label: "15KG PAYLOAD", x: "85%", y: "75%", delay: 1.4 },
+              { label: "PROVEN TELEMETRY", x: "5%", y: "80%", delay: 1.6 },
             ].map((point, i) => (
               <motion.div
                 key={i}

@@ -71,12 +71,12 @@ export default function InvestorCTA() {
             {
               title: "Competitive Edge",
               description:
-                "4+ years of competition-tested R&D. Proven team with wins.",
+                "5+ years of design-build R&D. Proven team with international track distinctions.",
             },
             {
               title: "Clear Roadmap",
               description:
-                "From prototype to pilot programs with first responder partners.",
+                "Transitioning structural testing to targeted pilot programs with industrial and response partners.",
             },
           ].map((item, i) => (
             <div

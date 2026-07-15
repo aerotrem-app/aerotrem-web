@@ -73,17 +73,20 @@ function StatCard({
 }
 
 // Partner logo placeholder
-function PartnerLogo({ name, delay = 0 }: { name: string; delay?: number }) {
+function PartnerLogo({ name, label = "Integration", delay = 0 }: { name: string; label?: string; delay?: number }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="flex h-16 items-center justify-center border border-white/10 bg-white/[0.02] px-6 transition-all hover:border-white/20 hover:bg-white/[0.05]"
+      className="flex flex-col h-20 items-center justify-center border border-white/10 bg-white/[0.02] px-6 transition-all hover:border-white/20 hover:bg-white/[0.05]"
     >
-      <span className="font-mono text-xs uppercase tracking-widest text-zinc-500">
+      <span className="font-mono text-xs uppercase tracking-widest text-white font-bold">
         {name}
+      </span>
+      <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-500 mt-1">
+        {label}
       </span>
     </motion.div>
   );
@@ -116,20 +119,19 @@ export default function TrustGrid() {
             Built on Trust
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-zinc-400">
-            Our track record speaks through precision engineering and measurable
-            impact. Every metric represents real-world reliability.
+            Our track record is defined by real physical parameters. Every metric represents dynamic calibration integrity.
           </p>
         </motion.div>
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {/* Large Feature Card - spans 2 cols */}
+          {/* Large Feature Card - Boeing */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="group relative col-span-1 overflow-hidden border border-white/10 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent p-8 md:col-span-2 md:row-span-2"
+            className="group relative col-span-1 overflow-hidden border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 via-transparent to-transparent p-8 md:col-span-2 md:row-span-2"
           >
             {/* Animated border gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-transparent to-cyan-500/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -138,24 +140,23 @@ export default function TrustGrid() {
               <div className="mb-6 inline-flex items-center gap-2 border border-cyan-500/30 bg-cyan-500/10 px-3 py-1">
                 <div className="h-2 w-2 animate-pulse rounded-full bg-cyan-500" />
                 <span className="font-mono text-[10px] uppercase tracking-widest text-cyan-500">
-                  Live System Status
+                  Boeing Partnership
                 </span>
               </div>
 
               <div className="font-display text-6xl font-bold text-white md:text-7xl lg:text-8xl">
-                <AnimatedCounter value={99.97} suffix="%" />
+                <AnimatedCounter value={100} suffix="%" />
               </div>
               <h3 className="mt-4 font-display text-xl font-bold uppercase tracking-wide text-white">
-                Operational Uptime
+                Co-Development Validation
               </h3>
               <p className="mt-2 max-w-md text-zinc-400">
-                Our systems maintain near-perfect reliability across all
-                deployed infrastructure, exceeding industry standards by 2.3x.
+                Actively collaborating with Boeing to coordinate, evaluate, and optimize autonomous flight safety and payload delivery configurations.
               </p>
 
               {/* Mini chart visualization */}
               <div className="mt-8 flex h-16 items-end gap-1">
-                {[95, 88, 92, 97, 99, 98, 99, 100, 99, 100, 99, 100].map(
+                {[45, 60, 52, 70, 82, 80, 89, 90, 95, 100, 99, 100].map(
                   (height, i) => (
                     <motion.div
                       key={i}
@@ -169,38 +170,38 @@ export default function TrustGrid() {
                 )}
               </div>
               <div className="mt-2 flex justify-between text-[10px] text-zinc-500">
-                <span>Jan</span>
-                <span>Dec 2025</span>
+                <span>Phase 1</span>
+                <span>Milestone Track 2026</span>
               </div>
             </div>
           </motion.div>
 
           {/* Standard Stat Cards */}
           <StatCard
-            label="Flight Hours"
-            value={12847}
-            description="Cumulative hours of successful autonomous operation"
+            label="Calibration Thrust"
+            value={40}
+            suffix="kg"
+            description="Motor telemetry class mapped on our proprietary thrust testing rig"
             delay={0.1}
           />
           <StatCard
-            label="Partners"
-            value={23}
-            suffix="+"
-            description="Enterprise clients across defense & commercial sectors"
+            label="Active Partners"
+            value={1}
+            description="Validated aerospace collaboration with Boeing"
             delay={0.15}
           />
           <StatCard
-            label="Efficiency Gain"
-            value={340}
-            suffix="%"
-            description="Average improvement in operational efficiency for clients"
-            delay={0.2}
+            label="Research Distinction"
+            value={1}
+            suffix="🏆"
+            description="Bell Canada Lichten Award for test stand instrumentation"
+            delay={0.25}
           />
           <StatCard
-            label="Incidents"
+            label="Critical Failures"
             value={0}
-            description="Zero critical failures since inception"
-            delay={0.25}
+            description="Zero avionics or structural failures across dynamic testing runs"
+            delay={0.2}
           />
         </div>
 
@@ -213,15 +214,14 @@ export default function TrustGrid() {
           className="mt-16 border-t border-white/10 pt-16"
         >
           <p className="mb-8 text-center font-mono text-xs uppercase tracking-[0.2em] text-zinc-500">
-            Trusted by Industry Leaders
+            Ecosystem Collaborations & Planned Hardware Pipelines
           </p>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
-            <PartnerLogo name="McGill" delay={0} />
-            <PartnerLogo name="NAV Canada" delay={0.05} />
-            <PartnerLogo name="Bombardier" delay={0.1} />
-            <PartnerLogo name="CAE" delay={0.15} />
-            <PartnerLogo name="Pratt & Whitney" delay={0.2} />
-            <PartnerLogo name="Bell" delay={0.25} />
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+            <PartnerLogo name="Boeing" label="Partner" delay={0} />
+            <PartnerLogo name="McGill" label="Academic Hub" delay={0.05} />
+            <PartnerLogo name="MAD Components" label="Propulsion Pipeline" delay={0.1} />
+            <PartnerLogo name="LabJack" label="DAQ Pipeline" delay={0.15} />
+            <PartnerLogo name="DigiKey" label="Avionics Pipeline" delay={0.25} />
           </div>
         </motion.div>
 
